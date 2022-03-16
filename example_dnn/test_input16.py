@@ -51,7 +51,7 @@ chain_sig.Add(inputname)
 #    chain_sig.Add(fsig)
 
 
-h_s=ROOT.TH1D("h",'h',100,-1.,1.)
+h_s=ROOT.TH1D("h",'h',100,0.,1.)
 
 
 print 'run sig'
