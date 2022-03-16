@@ -5,7 +5,7 @@ import sys
 inputname=sys.argv[1]
 
 WP='DeepAK8WP0p5'
-xmlfile='/cms_scratch/jhchoi/keras_my/scripts_ntree30000_shrinkage_0p1/TMVA_jhchoi//xml_h5_dnn/TMVAClassification_DNN.weights.xml'
+xmlfile='../xml_h5_dnn/TMVAClassification_DNN.weights.xml'
 
 
 ##---Variables---##
