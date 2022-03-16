@@ -1,9 +1,11 @@
+
+
 address='root://cms-xrdr.private.lo:2094'
 #INPUTDIR=/cms_scratch/jhchoi/keras_my/input_tree
 INPUTDIR="${address}"'//xrd/store/user/jhchoi/Latino/HWWNano/Summer16_102X_nAODv7_Full2016v7_HWW/MCl1loose2016v7__MCCorr2016v7__HMSemilepSKIMv7_1__HMFull_V13_jhchoi_nom/'
 
 
-RUNPY=/cms_scratch/jhchoi/keras_my/scripts_ntree30000_shrinkage_0p1/TMVA_jhchoi/example_dnn/test_input16.py
+RUNPY=${PWD}/test_input16.py
 
 
 ARR_F=(
