@@ -1,6 +1,7 @@
 import ROOT
 import sys
 mass=sys.argv[1]
+print "===mass=",mass,"===="
 fsig=ROOT.TFile.Open('WORKDIR/vbf'+mass+'.root')
 fbkg=ROOT.TFile.Open('WORKDIR/ggf'+mass+'.root')
 hsig=fsig.Get("h")
