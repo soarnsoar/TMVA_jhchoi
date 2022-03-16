@@ -1,4 +1,4 @@
-
+export _JHCHOI_TMVATEST="${PWD}"
 
 address='root://cms-xrdr.private.lo:2094'
 #INPUTDIR=/cms_scratch/jhchoi/keras_my/input_tree
@@ -6,7 +6,7 @@ INPUTDIR="${address}"'//xrd/store/user/jhchoi/Latino/HWWNano/Summer16_102X_nAODv
 
 
 RUNPY=${PWD}/test_input16.py
-
+XML=${PWD}/../xml_h5_dnn/TMVAClassification_DNN.weights.xml
 
 ARR_F=(
 nanoLatino_GluGluHToWWToLNuQQ_M4000__part0.root
@@ -49,6 +49,6 @@ cd -
 
 for F in ${ARR_F[@]};do
     #echo $F
-    python python_tool/ExportShellCondorSetup.py -c "python ${RUNPY} ${INPUTDIR}/${F}" -d "WORKDIR/${F}" -n "testinput" -m 1 -s 
+    python python_tool/ExportShellCondorSetup.py -c "python ${RUNPY} ${INPUTDIR}/${F} ${XML}" -d "WORKDIR/${F}" -n "testinput" -m 1 -s 
 
 done

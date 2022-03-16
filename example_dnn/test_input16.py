@@ -2,10 +2,14 @@ import glob
 import ROOT
 from array import array
 import sys
-inputname=sys.argv[1]
+import os
 
+#_JHCHOI_TMVATEST=os.environ["_JHCHOI_TMVATEST"]
+#print _JHCHOI_TMVATEST
+inputname=sys.argv[1]
+xmlfile=sys.argv[2]
 WP='DeepAK8WP0p5'
-xmlfile='../xml_h5_dnn/TMVAClassification_DNN.weights.xml'
+#xmlfile=_JHCHOI_TMVATEST+'../xml_h5_dnn/TMVAClassification_DNN.weights.xml'
 
 
 ##---Variables---##
