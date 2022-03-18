@@ -65,7 +65,7 @@ print 'run sig'
 N=chain_sig.GetEntries()
 print N
 i=0
-#  'sig' : 'Lepton_pt[0] > 40 && isBoost_'+WP+'_nom && (lnJ_'+WP+'_nom_widx >=0)&&(fabs(Lepton_eta[0]) < 2.5  ) && (  Alt$(Lepton_isLoose[1]*Lepton_pt[1],-1) < 10 ) && PuppiMET_nom_pt > 40 ',
+#  'sig' : 'Lepton_pt[0] > 40 && isBoost_'+WP+'_nom && (lnjj_'+WP+'_nom_widx >=0)&&(fabs(Lepton_eta[0]) < 2.5  ) && (  Alt$(Lepton_isLoose[1]*Lepton_pt[1],-1) < 10 ) && PuppiMET_nom_pt > 40 ',
 
 
 for event in chain_sig:
@@ -73,12 +73,12 @@ for event in chain_sig:
     if i%100==0 : print i,'/',N
     lepton_pt=event.Lepton_pt[0]
     isBoost=event.isBoost_DeepAK8WP0p5_nom
-    lnJ_nom_widx=event.lnJ_DeepAK8WP0p5_nom_widx
+    lnjj_nom_widx=event.lnjj_DeepAK8WP0p5_nom_widx
     PuppiMET=event.PuppiMET_nom_pt
 
     if lepton_pt<40 : continue
     if not isBoost:continue
-    if lnJ_nom_widx<0:continue
+    if lnjj_nom_widx<0:continue
     if PuppiMET<40:continue
     
     AddJet_pt1[0]= event.AddJetResol_dMchi2Resolution_nom_pt[0] if len(event.AddJetBoost_DeepAK8WP0p5_nom_pt)>1 else 3.
@@ -94,8 +94,8 @@ for event in chain_sig:
     dEta_of_max_mjj[0]=event.dEta_of_max_mjj_Resol_dMchi2Resolution_nom
     mjj_of_max_dEta[0]=event.mjj_of_max_dEta_Resol_dMchi2Resolution_nom
 
-    lnJ_pt[0]=event.lnjj_dMchi2Resolution_nom_pt
-    lnJ_mass[0]=event.lnjj_dMchi2Resolution_nom_mass
+    lnjj_pt[0]=event.lnjj_dMchi2Resolution_nom_pt
+    lnjj_mass[0]=event.lnjj_dMchi2Resolution_nom_mass
 
 
     ret=myreader.EvaluateMVA("PyKeras::DNN")
