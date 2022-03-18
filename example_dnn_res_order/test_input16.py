@@ -72,21 +72,21 @@ for event in chain_sig:
     i+=1
     if i%100==0 : print i,'/',N
     lepton_pt=event.Lepton_pt[0]
-    isBoost=event.isBoost_DeepAK8WP0p5_nom
-    lnjj_nom_widx=event.lnjj_DeepAK8WP0p5_nom_widx
+    #isBoost=event.isBoost_DeepAK8WP0p5_nom
+    #lnjj_nom_widx=event.lnjj_DeepAK8WP0p5_nom_widx
     PuppiMET=event.PuppiMET_nom_pt
 
     if lepton_pt<40 : continue
-    if not isBoost:continue
-    if lnjj_nom_widx<0:continue
+    #if not isBoost:continue
+    #if lnjj_nom_widx<0:continue
     if PuppiMET<40:continue
     
-    AddJet_pt1[0]= event.AddJetResol_dMchi2Resolution_nom_pt[0] if len(event.AddJetBoost_DeepAK8WP0p5_nom_pt)>1 else 3.
-    AddJet_eta1[0]= event.AddJetResol_dMchi2Resolution_nom_eta[0] if len(event.AddJetBoost_DeepAK8WP0p5_nom_eta)>1 else 3.    
+    AddJet_pt1[0]= event.AddJetResol_dMchi2Resolution_nom_pt[0] if len(event.AddJetResol_dMchi2Resolution_nom_pt)>1 else 3.
+    AddJet_eta1[0]= event.AddJetResol_dMchi2Resolution_nom_eta[0] if len(event.AddJetResol_dMchi2Resolution_nom_eta)>1 else 3.    
 
 
-    AddJet_pt2[0]=event.AddJetResol_dMchi2Resolution_nom_pt[1] if len(event.AddJetBoost_DeepAK8WP0p5_nom_pt)>2 else 3.
-    AddJet_eta2[0]=event.AddJetResol_dMchi2Resolution_nom_eta[1] if len(event.AddJetBoost_DeepAK8WP0p5_nom_eta)>2 else 3.
+    AddJet_pt2[0]=event.AddJetResol_dMchi2Resolution_nom_pt[1] if len(event.AddJetResol_dMchi2Resolution_nom_pt)>2 else 3.
+    AddJet_eta2[0]=event.AddJetResol_dMchi2Resolution_nom_eta[1] if len(event.AddJetResol_dMchi2Resolution_nom_eta)>2 else 3.
     
     max_mjj[0]=event.max_mjj_Resol_dMchi2Resolution_nom
     max_dEta[0]=event.max_dEta_Resol_dMchi2Resolution_nom
