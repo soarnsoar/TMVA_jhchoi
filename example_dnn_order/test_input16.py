@@ -27,10 +27,10 @@ lnJ_mass=array('f',[0])
 ##---Set TMVA--##
 
 myreader=ROOT.TMVA.Reader("V")
-myreader.AddVariable('Alt$(AddJetBoost_'+WP+'_nom_pt[0], -10.)',AddJet_pt1)
-myreader.AddVariable('Alt$(AddJetBoost_'+WP+'_nom_eta[0] , -10.)',AddJet_eta1)
-myreader.AddVariable('Alt$(AddJetBoost_'+WP+'_nom_pt[1], -10)',AddJet_pt2)
-myreader.AddVariable('Alt$(AddJetBoost_'+WP+'_nom_eta[1] , -10)',AddJet_eta2)
+myreader.AddVariable('Alt$(AddJetBoost_'+WP+'_nom_pt[0], 3.)',AddJet_pt1)
+myreader.AddVariable('Alt$(AddJetBoost_'+WP+'_nom_eta[0] , 3.)',AddJet_eta1)
+myreader.AddVariable('Alt$(AddJetBoost_'+WP+'_nom_pt[1], 3.)',AddJet_pt2)
+myreader.AddVariable('Alt$(AddJetBoost_'+WP+'_nom_eta[1] , 3.)',AddJet_eta2)
 
 myreader.AddVariable('max_mjj_Boost_'+WP+'_nom',max_mjj)
 myreader.AddVariable('mjj_of_max_dEta_Boost_'+WP+'_nom',mjj_of_max_dEta)
