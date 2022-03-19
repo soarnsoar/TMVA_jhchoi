@@ -75,12 +75,25 @@ for event in chain_sig:
     #isBoost=event.isBoost_DeepAK8WP0p5_nom
     #lnjj_nom_widx=event.lnjj_DeepAK8WP0p5_nom_widx
     PuppiMET=event.PuppiMET_nom_pt
+    isResol=event.isResol_dMchi2Resolution_nom
+    minptWOverM=event.lnjj_dMchi2Resolution_nom_minPtWOverM
+    Wlep_Mt=event.Wlep_nom_Mt
+    lnjj_Mt=lnjj_dMchi2Resolution_nom_Mt
+    
+    '''
+  'sig' : 'Lepton_pt[0] > 40 &&(isResol'+_ALGO_+'nom) &&(lnjj'+_ALGO_+'nom_minPtWOverM>0.35) &&(Wlep_nom_Mt > 50)&&(lnjj'+_ALGO_+'nom_Mt > 60)&&(fabs(Lepton_eta[0]) < 2.5  ) && \
+(  Alt$(Lepton_isLoose[1]*Lepton_pt[1],-1) < 10 ) && PuppiMET_nom_pt > 30 ',
+
+    '''
 
     if lepton_pt<40 : continue
     #if not isBoost:continue
     #if lnjj_nom_widx<0:continue
-    if PuppiMET<40:continue
-    
+    if PuppiMET<30:continue
+    if not isResol:continue
+    if minptWOverM < 0.35:continue
+    if Wlep_Mt < 50 :continue
+    if lnjj_Mt < 60 : continue
     AddJet_pt1[0]= event.AddJetResol_dMchi2Resolution_nom_pt[0] if len(event.AddJetResol_dMchi2Resolution_nom_pt)>1 else 3.
     AddJet_eta1[0]= event.AddJetResol_dMchi2Resolution_nom_eta[0] if len(event.AddJetResol_dMchi2Resolution_nom_eta)>1 else 3.    
 
