@@ -1,9 +1,10 @@
 import ROOT
 import sys
 mass=sys.argv[1]
+yr=sys.argv[2]
 print "===mass=",mass,"===="
-fsig=ROOT.TFile.Open('WORKDIR/vbf'+mass+'.root')
-fbkg=ROOT.TFile.Open('WORKDIR/ggf'+mass+'.root')
+fsig=ROOT.TFile.Open('WORKDIR'+yr+'/vbf'+mass+'.root')
+fbkg=ROOT.TFile.Open('WORKDIR'+yr+'/ggf'+mass+'.root')
 hsig=fsig.Get("h")
 hbkg=fbkg.Get("h")
 #hsig.Rebin(5)
@@ -13,11 +14,12 @@ hsig.Draw()
 hbkg.Draw("same")
 hsig.SetLineColor(1)
 hbkg.SetLineColor(2)
-c.SaveAs("ROC"+mass+".pdf")
+c.SaveAs("ROC"+mass+'_'+yr+".pdf")
 
 
 stotal=hsig.Integral()
 btotal=hbkg.Integral()
+
 
 
 
@@ -48,3 +50,10 @@ for i in range(1,N+1):
 
 
 print mysum
+hsig.Scale(1/stotal)
+hbkg.Scale(1/btotal)
+hsig.Draw()
+hbkg.Draw("same")
+hsig.SetLineColor(1)
+hbkg.SetLineColor(2)
+c.SaveAs("ROC"+mass+"_norm"+'_'+yr+".pdf")

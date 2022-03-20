@@ -78,7 +78,7 @@ for event in chain_sig:
     isResol=event.isResol_dMchi2Resolution_nom
     minptWOverM=event.lnjj_dMchi2Resolution_nom_minPtWOverM
     Wlep_Mt=event.Wlep_nom_Mt
-    lnjj_Mt=lnjj_dMchi2Resolution_nom_Mt
+    lnjj_Mt=event.lnjj_dMchi2Resolution_nom_Mt
     
     '''
   'sig' : 'Lepton_pt[0] > 40 &&(isResol'+_ALGO_+'nom) &&(lnjj'+_ALGO_+'nom_minPtWOverM>0.35) &&(Wlep_nom_Mt > 50)&&(lnjj'+_ALGO_+'nom_Mt > 60)&&(fabs(Lepton_eta[0]) < 2.5  ) && \
