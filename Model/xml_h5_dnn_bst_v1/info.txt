@@ -1,0 +1,1 @@
+selu 128 128 128 2 batchnorm/dropout 20%/
