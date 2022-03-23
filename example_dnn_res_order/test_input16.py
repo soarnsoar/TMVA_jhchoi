@@ -79,13 +79,13 @@ for event in chain_sig:
     minptWOverM=event.lnjj_dMchi2Resolution_nom_minPtWOverM
     Wlep_Mt=event.Wlep_nom_Mt
     lnjj_Mt=event.lnjj_dMchi2Resolution_nom_Mt
-    
+    isboost=event.isBoost_DeepAK8WP0p5_nom
     '''
   'sig' : 'Lepton_pt[0] > 40 &&(isResol'+_ALGO_+'nom) &&(lnjj'+_ALGO_+'nom_minPtWOverM>0.35) &&(Wlep_nom_Mt > 50)&&(lnjj'+_ALGO_+'nom_Mt > 60)&&(fabs(Lepton_eta[0]) < 2.5  ) && \
 (  Alt$(Lepton_isLoose[1]*Lepton_pt[1],-1) < 10 ) && PuppiMET_nom_pt > 30 ',
 
     '''
-
+    if isboost:continue
     if lepton_pt<40 : continue
     #if not isBoost:continue
     #if lnjj_nom_widx<0:continue
