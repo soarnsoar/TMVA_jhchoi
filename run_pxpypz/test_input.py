@@ -95,12 +95,12 @@ for event in chain_sig:
     
     AddJet_pt1[0]= event.AddJetBoost_DeepAK8WP0p5_nom_pt[0] if len(event.AddJetBoost_DeepAK8WP0p5_nom_pt)>1 else -10.
     AddJet_eta1[0]= event.AddJetBoost_DeepAK8WP0p5_nom_eta[0] if len(event.AddJetBoost_DeepAK8WP0p5_nom_eta)>1 else -10.    
-    AddJet_phi1[0]= event.AddJetBoost_DeepAK8WP0p5_nom_eta[0] if len(event.AddJetBoost_DeepAK8WP0p5_nom_phi)>1 else -10.    
+    AddJet_phi1[0]= event.AddJetBoost_DeepAK8WP0p5_nom_phi[0] if len(event.AddJetBoost_DeepAK8WP0p5_nom_phi)>1 else -10.    
 
 
     AddJet_pt2[0]=event.AddJetBoost_DeepAK8WP0p5_nom_pt[1] if len(event.AddJetBoost_DeepAK8WP0p5_nom_pt)>2 else -10.
     AddJet_eta2[0]=event.AddJetBoost_DeepAK8WP0p5_nom_eta[1] if len(event.AddJetBoost_DeepAK8WP0p5_nom_eta)>2 else -10.
-    AddJet_phi2[0]=event.AddJetBoost_DeepAK8WP0p5_nom_eta[1] if len(event.AddJetBoost_DeepAK8WP0p5_nom_phi)>2 else -10.
+    AddJet_phi2[0]=event.AddJetBoost_DeepAK8WP0p5_nom_phi[1] if len(event.AddJetBoost_DeepAK8WP0p5_nom_phi)>2 else -10.
     
     max_mjj[0]=event.max_mjj_Boost_DeepAK8WP0p5_nom
     max_dEta[0]=event.max_dEta_Boost_DeepAK8WP0p5_nom
