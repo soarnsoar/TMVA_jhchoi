@@ -34,7 +34,7 @@ myreader=ROOT.TMVA.Reader("V")
 
 ##jet1
 myreader.AddVariable("Alt$(AddJetBoost_DeepAK8WP0p5_nom_pt[0],-10.)",AddJet_pt1)
-myreader.AddVariable("Alt$(AddJetBoost_DeepAK8WP0p5_nom_eta[0],-10.)",,AddJet_eta1)
+myreader.AddVariable("Alt$(AddJetBoost_DeepAK8WP0p5_nom_eta[0],-10.)",AddJet_eta1)
 myreader.AddVariable("Alt$(AddJetBoost_DeepAK8WP0p5_nom_phi[0],-10.)",AddJet_phi1)
 ##jet2
 myreader.AddVariable("Alt$(AddJetBoost_DeepAK8WP0p5_nom_pt[1],-10)",AddJet_pt2)
