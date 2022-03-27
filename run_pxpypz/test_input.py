@@ -110,9 +110,9 @@ for event in chain_sig:
 
     
     #lnJ_pt[0]=event.lnJ_DeepAK8WP0p5_nom_pt
-    lnJ_px[0]=((event.WtaggerFatjet_DeepAK8WP0p5_nom_pt)*(TMath::Cos(event.WtaggerFatjet_DeepAK8WP0p5_nom_phi)))+(event.Wlep_nom_pt*TMath::Cos(event.Wlep_nom_phi))
-    lnJ_py[0]=((event.WtaggerFatjet_DeepAK8WP0p5_nom_pt)*(TMath::Sin(event.WtaggerFatjet_DeepAK8WP0p5_nom_phi)))+(event.Wlep_nom_pt*TMath::Sin(event.Wlep_nom_phi))
-    lnJ_pz[0]=((WtaggerFatjet_DeepAK8WP0p5_nom_pt)*(TMath::SinH(WtaggerFatjet_DeepAK8WP0p5_nom_eta)))+(Wlep_nom_pt*TMath::SinH(Wlep_nom_eta))
+    lnJ_px[0]=((event.WtaggerFatjet_DeepAK8WP0p5_nom_pt[lnJ_nom_widx])*(ROOT.TMath.Cos(event.WtaggerFatjet_DeepAK8WP0p5_nom_phi[lnJ_nom_widx])))+(event.Wlep_nom_pt*ROOT.TMath.Cos(event.Wlep_nom_phi))
+    lnJ_py[0]=((event.WtaggerFatjet_DeepAK8WP0p5_nom_pt[lnJ_nom_widx])*(ROOT.TMath.Sin(event.WtaggerFatjet_DeepAK8WP0p5_nom_phi[lnJ_nom_widx])))+(event.Wlep_nom_pt*ROOT.TMath.Sin(event.Wlep_nom_phi))
+    lnJ_pz[0]=((event.WtaggerFatjet_DeepAK8WP0p5_nom_pt[lnJ_nom_widx])*(ROOT.TMath.SinH(event.WtaggerFatjet_DeepAK8WP0p5_nom_eta[lnJ_nom_widx])))+(event.Wlep_nom_pt*ROOT.TMath.SinH(event.Wlep_nom_eta))
     lnJ_mass[0]=event.lnJ_DeepAK8WP0p5_nom_mass
 
 
