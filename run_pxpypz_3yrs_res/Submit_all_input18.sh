@@ -49,6 +49,6 @@ cd -
 
 for F in ${ARR_F[@]};do
     #echo $F
-    python python_tool/ExportShellCondorSetup.py -c "python ${RUNPY} ${INPUTDIR}/${F} ${XML}" -d "WORKDIR/${F}" -n "testinput" -m 1 -s 
+    python python_tool/ExportShellCondorSetup.py -c "python ${RUNPY} ${INPUTDIR}/${F} ${XML}" -d "WORKDIR18/${F}" -n "testinput" -m 1 -s 
 
 done
