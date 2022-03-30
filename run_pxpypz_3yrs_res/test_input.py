@@ -107,7 +107,7 @@ for event in chain_sig:
     if lnjj_Mt < 60 : continue
     AddJet_pt1[0]= event.AddJetResol_dMchi2Resolution_nom_pt[0] if len(event.AddJetResol_dMchi2Resolution_nom_pt)>1 else -10.
     AddJet_eta1[0]= event.AddJetResol_dMchi2Resolution_nom_eta[0] if len(event.AddJetResol_dMchi2Resolution_nom_eta)>1 else -10.    
-    AddJet_phi1[0]= event.AddJetResol_dMchi2Resolution_nom_phi[0] if len(event.AddJetResol_dMchi2Resolution_nom_eta)>1 else -10.    
+    AddJet_phi1[0]= event.AddJetResol_dMchi2Resolution_nom_phi[0] if len(event.AddJetResol_dMchi2Resolution_nom_phi)>1 else -10.    
 
 
     AddJet_pt2[0]=event.AddJetResol_dMchi2Resolution_nom_pt[1] if len(event.AddJetResol_dMchi2Resolution_nom_pt)>2 else -10.
