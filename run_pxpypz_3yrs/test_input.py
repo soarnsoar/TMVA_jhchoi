@@ -112,7 +112,7 @@ for event in chain_sig:
     #lnJ_pt[0]=event.lnJ_DeepAK8WP0p5_nom_pt
     lnJ_pt[0]=event.lnJ_DeepAK8WP0p5_nom_mass
     lnJ_eta[0]=ROOT.TMath.ASinH((event.WtaggerFatjet_DeepAK8WP0p5_nom_pt[event.lnJ_DeepAK8WP0p5_nom_widx]*ROOT.TMath.SinH(event.WtaggerFatjet_DeepAK8WP0p5_nom_eta[event.lnJ_DeepAK8WP0p5_nom_widx])+event.Wlep_nom_pt*ROOT.TMath.SinH(event.Wlep_nom_eta))/event.lnJ_DeepAK8WP0p5_nom_pt)
-    lnJ_phi[0]=((event.WtaggerFatjet_DeepAK8WP0p5_nom_pt[lnJ_nom_widx])*(ROOT.TMath.SinH(event.WtaggerFatjet_DeepAK8WP0p5_nom_eta[lnJ_nom_widx])))+(event.Wlep_nom_pt*ROOT.TMath.SinH(event.Wlep_nom_eta))
+    lnJ_phi[0]=ROOT.TMath.ATan2((event.WtaggerFatjet_DeepAK8WP0p5_nom_pt[event.lnJ_DeepAK8WP0p5_nom_widx]*ROOT.TMath.Sin(event.WtaggerFatjet_DeepAK8WP0p5_nom_phi[event.lnJ_DeepAK8WP0p5_nom_widx])+event.Wlep_nom_pt*ROOT.TMath.Sin(event.Wlep_nom_phi)),(event.WtaggerFatjet_DeepAK8WP0p5_nom_pt[event.lnJ_DeepAK8WP0p5_nom_widx]*ROOT.TMath.Cos(event.WtaggerFatjet_DeepAK8WP0p5_nom_phi[event.lnJ_DeepAK8WP0p5_nom_widx])+event.Wlep_nom_pt*ROOT.TMath.Cos(event.Wlep_nom_phi)))
     lnJ_mass[0]=event.lnJ_DeepAK8WP0p5_nom_mass
 
 
